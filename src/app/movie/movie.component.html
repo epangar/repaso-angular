@@ -6,8 +6,13 @@
 
 
   <div *ngFor="let movie of movies; trackBy: trackById" class="frame__card">
-    <p class="frame__name"> {{movie.number}}-{{movie.title | json}} </p>
-    <p class="frame__plot"> {{movie.description | json}} </p>
-    <button (click)="delete(movie)">Delete</button>
+    <div [ngClass]="{'fizzbuzz': movie.number%15===0, 
+                    'fizz': movie.number%5===0, 
+                    'buzz': movie.number%3===0}">
+        <p class="frame__name"> {{movie.number}}-{{movie.title | json}} </p>
+        <p class="frame__plot"> {{movie.description | json}} </p>
+        <p *ngIf='getRandomIdValue(movie.id)%2===0'> {{ movie.id  }}</p>
+        <button (click)="delete(movie)">Delete</button>
+    </div>  
   </div>
 

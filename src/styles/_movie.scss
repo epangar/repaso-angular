@@ -1,0 +1,49 @@
+.buttons{
+    &__GET{
+      text-align: center;
+    }
+  }
+
+.frame {
+    background-color: transparent;
+    height: 500px;
+    width: 70%;
+    margin: 0 15%;
+    border: 1px blue solid;
+    overflow: scroll;
+
+
+    &__card{
+        border: 1px solid #ddd;
+        margin-bottom: 1px;
+    }
+
+    
+
+    &__plot{
+        
+        margin: 5% 15%;
+        text-align: initial;
+    }
+
+    &__title{
+        font-size: 20px;
+        font-style: bold;
+        color: red;
+    }
+}
+
+.fizz{
+    background-color: red;
+    color: white !important;
+}
+
+.buzz{
+    background-color: greenyellow;
+    color: black;
+}
+
+.fizzbuzz{
+    background-color: burlywood;
+    color: lightgrey;
+}

@@ -3,6 +3,7 @@ import { ListService } from "../../services/list.service";
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
@@ -57,6 +58,13 @@ export class MovieComponent implements OnInit {
   trackById = (id: any, item: any) =>  !item ? null : item.id;
 
   addMovietoMyMovies(){
+  }
+
+  getRandomIdValue(input:string = ""){
+    
+    return input.split("")
+      .map(c=> c.charCodeAt(0)*Math.floor(Math.random()*5) )
+      .reduce((a,b)=>a+b)
   }
 
   
