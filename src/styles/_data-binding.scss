@@ -1,0 +1,42 @@
+// component css goes here
+.data-binding{
+
+    &__form{
+        border: 1px solid black;
+        padding: 3px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        &-row{
+            
+            display: flex;
+
+            & > p {
+                width: 50%;                
+                text-align: left;
+            }
+        
+            & > input {
+                width: 50%;
+                height: 20px;
+                margin: auto 0;
+            }
+
+            & > button {
+                width: 33%;
+            }
+        }
+        
+    }
+
+    
+}
+
+data-binding{
+    display: flex;
+}
+
+.margin-top-30{
+    margin-top: 30px !important;
+}

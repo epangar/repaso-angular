@@ -1,0 +1,83 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js --v
+
+PATH: 
+  C:\Users\epan\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\epan\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\nodejs\npm;C:\Users\epan\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Microsoft VS Code\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\SlikSvn\bin;C:\Program Files\dotnet;C:\Users\epan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\epan\AppData\Roaming\nvm;C:\Program Files (x86)\FontForgeBuilds\bin;C:\Program Files\nodejs;C:\Users\epan\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\epan\AppData\Roaming\npm;C:\Users\epan\AppData\Local\Yarn\bin;C:\Users\epan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  10.14.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.5.2.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:129645:19)
+      at Object.onceWrapper (events.js:273:13)
+      at ClientRequest.emit (events.js:182:13)
+      at TLSSocket.emitRequestTimeout (_http_client.js:662:40)
+      at Object.onceWrapper (events.js:273:13)
+      at TLSSocket.emit (events.js:182:13)
+      at TLSSocket.Socket._onTimeout (net.js:453:8)
+      at ontimeout (timers.js:436:11)
+      at tryOnTimeout (timers.js:300:5)
+      at listOnTimeout (timers.js:263:5)
+
+npm manifest: 
+  {
+    "name": "angular-studio-ghibli",
+    "version": "0.0.0",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/common": "~8.0.0",
+      "@angular/compiler": "~8.0.0",
+      "@angular/core": "~8.0.0",
+      "@angular/forms": "~8.0.0",
+      "@angular/platform-browser": "~8.0.0",
+      "@angular/platform-browser-dynamic": "~8.0.0",
+      "@angular/router": "~8.0.0",
+      "core-js": "^3.1.3",
+      "rxjs": "~6.5.2",
+      "rxjs-compat": "^6.5.2",
+      "tslib": "^1.10.0",
+      "zone.js": "~0.9.1"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "^0.800.2",
+      "@angular/cli": "~8.0.2",
+      "@angular/compiler-cli": "^8.0.0",
+      "@angular/language-service": "~8.0.0",
+      "@types/jasmine": "~3.3.13",
+      "@types/jasminewd2": "~2.0.3",
+      "@types/node": "~12.0.8",
+      "codelyzer": "~5.1.0",
+      "jasmine-core": "~3.4.0",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "^4.1.0",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "^2.0.5",
+      "karma-jasmine": "~2.0.1",
+      "karma-jasmine-html-reporter": "^1.4.2",
+      "protractor": "~5.4.0",
+      "ts-node": "~8.2.0",
+      "tslint": "~5.17.0",
+      "typescript": "3.4.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

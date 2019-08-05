@@ -1,0 +1,7 @@
+<button class="buttons__GET" (click)="getJokes()">Get a random Chuck Norris joke!</button>
+<button class="buttons__GET" (click)="clean()">Clean!</button>
+
+<div > 
+  <img src= '{{ jokes.icon_url }}' alt = '{{ jokes.updated_at }}'>
+  <p class="chuck__text"> {{jokes.value }} </p>
+</div>  

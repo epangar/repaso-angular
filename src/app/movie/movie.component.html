@@ -1,0 +1,13 @@
+<button class="buttons__GET" (click)="getMovies()">Get all the movies!</button>
+<button class="buttons__GET" (click)="clean()">Clean!</button>
+<button class="buttons__GET" (click)="addMovietoMyMovies()">Add a movie!</button>
+<button class="buttons__GET" (click)="getMyMovies()" *ngIf='this.movies.length>0'>Get my movies</button>
+
+
+
+  <div *ngFor="let movie of movies; trackBy: trackById" class="frame__card">
+    <p class="frame__name"> {{movie.number}}-{{movie.title | json}} </p>
+    <p class="frame__plot"> {{movie.description | json}} </p>
+    <button (click)="delete(movie)">Delete</button>
+  </div>
+
