@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnCanges } from '@angular/core';
 
 
 @Component({
@@ -6,11 +6,8 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
     templateUrl: 'data-binding-child.component.html',
     styleUrls: ['../../styles/_data-binding-child.component.scss']
 })
-export class DataBindingChildComponent implements OnChanges{
-    
-    ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-        throw new Error("Method not implemented.");
-    }
+export class DataBindingChildComponent {
+   
     
     
     

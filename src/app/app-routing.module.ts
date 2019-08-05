@@ -5,6 +5,7 @@ import { ChuckComponent } from './chuck/chuck.component';
 import { LazyComponent } from './lazy-loading/lazy.component';
 import { ScreenComponent } from './screen/screen.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "chuck", component: ChuckComponent},
   {path: "lazy", component: LazyComponent},
   {path: "data-binding", component: DataBindingComponent},
+  {path: "pipes", component: PipesComponent},
  
 ];
 
