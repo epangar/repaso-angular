@@ -14,7 +14,7 @@ import { ScreenComponent } from './screen/screen.component';
 })
 
 export class AppComponent {
-  title = 'my API Catalog';
+  title = 'my Angular demo';
   route: string;
   myCache: Object;
 

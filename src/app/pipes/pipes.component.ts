@@ -9,6 +9,8 @@ import { Component, NgModule } from '@angular/core';
 
 export class PipesComponent {
     
-
+    ngOnInit(){
+        console.clear()
+    }
 
 }
