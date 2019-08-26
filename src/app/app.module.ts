@@ -21,6 +21,7 @@ import { DataBindingChildComponent } from './data-binding-child/data-binding-chi
 import { ListService } from '../services/list.service'; 
 import { ChuckService } from '../services/chuck.service'; 
 import { NasaService } from '../services/nasa.service'; 
+import { ParentToChildService } from "../services/parentToChild.service";
 
 //Pipes
 import { LeetPipe } from '../app/pipes/catalogue/leet.pipe';
@@ -53,7 +54,13 @@ import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
     FormsModule
     
   ],
-  providers: [ ListService, ChuckService, NasaService, EnvServiceProvider,],
+  providers: [ 
+    ListService, 
+    ChuckService, 
+    NasaService, 
+    EnvServiceProvider, 
+    ParentToChildService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

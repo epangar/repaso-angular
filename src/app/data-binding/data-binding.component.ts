@@ -25,10 +25,10 @@ export class DataBindingComponent {
         console.clear()
     }
 
-    submitForm(myForm: any) {
+    submitForm(myForm) {
         this.sentPerson = myForm.value;
         console.log(this.sentPerson)
-        
+        this.send
     }
 
     receiveRandomNumber(number: number):void{

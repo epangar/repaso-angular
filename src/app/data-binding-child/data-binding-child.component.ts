@@ -10,11 +10,11 @@ import { Person } from '../../classes/Person';
 export class DataBindingChildComponent {
    
     @Input() sentPerson: Person;
-    
+    @Input() people: Array<Person>=[];
     @Output() randomNumberToEmit: EventEmitter<number> = new EventEmitter<number>()
     
     randomNumber: number;
-    people: Array<Person>=["hola", 2];
+    
     
     constructor() {
         
