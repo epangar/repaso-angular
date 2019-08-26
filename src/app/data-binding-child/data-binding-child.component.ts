@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Person } from '../../classes/Person';
 
 
 @Component({
@@ -8,32 +9,33 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
 })
 export class DataBindingChildComponent {
    
+    @Input() sentPerson: Person;
     
+    @Output() randomNumberToEmit: EventEmitter<number> = new EventEmitter<number>()
     
-    
-    // @Input() formName: string;
-    // @Input() formSurname: string;
-    // @Input() formAge: number;
-    // @Input() formEmail: string;
-
     randomNumber: number;
-    @Input() receivedPerson: object;
-    @Output() randomNumberToEmit = new EventEmitter<number>()
-   
-    public people: Array<object> =[];
+    people: Array<Person>=["hola", 2];
     
+    constructor() {
+        
+    }
 
-    constructor() {}
+    
+    
 
     ngOnInit() {
+        
+        this.people=[]
+        
         this.randomNumber = Math.floor(Math.random()*100);
-        (this.emmitNumber());
+        
+        (this.emitNumber());
     }
 
     
 
-    getPerson(receivedPerson: object) {
-        this.people.push(receivedPerson)
+    getPerson(people: object) {
+        this.people.push(people)
         console.log(this.people)
         
     }
@@ -43,9 +45,13 @@ export class DataBindingChildComponent {
     }
 
     
-    emmitNumber(){
-        console.log(this.randomNumber)
-        this.randomNumberToEmit.emit(this.randomNumber)
+    emitNumber(){
+        
+        if(this.people.length>1){
+            console.log(this.randomNumber)
+            this.randomNumberToEmit.emit(this.randomNumber)
+        }
+        
     }
     
 }

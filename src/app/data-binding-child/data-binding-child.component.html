@@ -1,16 +1,18 @@
 <!--component html goes here -->
 <p *ngIf="people.length>0">List of people</p>
 <button *ngIf="people.length>0" (click)="emitNumber()"></button>
-<p>{{ receivedPerson | json }}</p>
+<p *ngIf="people.length>0">{{ people | json }}</p>
 
-<ul *ngFor="let person of people; trackBy: getPerson">
-    <li>
-        <ul>
-                <li>{{ receivedPerson.firstName }}</li>
-                <li>{{ receivedPerson.surname }}</li>
-                <li>{{ receivedPerson.age }}</li>
-                <li>{{ receivedPerson.email }}</li>
-                
+<div *ngIf="people.length>0">
+        <ul  *ngFor="let person of people; trackBy: getPerson">
+            <li>
+                <ul>
+                        <li>{{ people.firstName }}</li>
+                        <li>{{ people.surname }}</li>
+                        <li>{{ people.age }}</li>
+                        <li>{{ people.email }}</li>
+                        
+                </ul>
+            </li>    
         </ul>
-    </li>    
-</ul>
+</div>

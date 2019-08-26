@@ -1,4 +1,6 @@
 import { Component, Input, OnInit, Output} from '@angular/core';
+import { ParentToChildService } from '../../services/parentToChild.service';
+import { DataBindingChildComponent } from '../data-binding-child/data-binding-child.component';
 
 
 @Component({
@@ -8,19 +10,19 @@ import { Component, Input, OnInit, Output} from '@angular/core';
 })
 
 
+
 export class DataBindingComponent {
     
-    @Input() randomNumberToEmit : number;
     sentPerson: object; 
     receivedRandomNumber : number;
 
-    constructor(){
-        
-        
+    constructor(private send: ParentToChildService){
+        this.send=send;
+ 
     }
 
     ngOnInit(){
-        
+        console.clear()
     }
 
     submitForm(myForm: any) {
@@ -30,6 +32,7 @@ export class DataBindingComponent {
     }
 
     receiveRandomNumber(number: number):void{
+        
         this.receivedRandomNumber=number;
     }
 

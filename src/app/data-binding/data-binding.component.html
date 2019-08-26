@@ -27,11 +27,11 @@
         <button type='submit' >Submit!</button>
     </div>
 
-    <p>This person's random number: {{ randomNumberToEmit }} </p>
+    <p>This person's random number: {{ receivedRandomNumber }} </p>
 
 </form>
 
 
-<data-binding-child [receivedPerson]="sentPerson" (randomNumberToEmit)="receiveRandomNumber(randomNumberToEmit)"></data-binding-child>
+<data-binding-child [people]="sentPerson" (randomNumberToEmit)="receiveRandomNumber($event)"></data-binding-child>
 
 
