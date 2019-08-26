@@ -51,7 +51,7 @@ import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
     
   ],
   providers: [ 
