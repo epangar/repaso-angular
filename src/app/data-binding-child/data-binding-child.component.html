@@ -1,7 +1,7 @@
 <!--component html goes here -->
 <p *ngIf="people.length>0">List of people</p>
 <button *ngIf="people.length>0" (click)="emitNumber()"></button>
-<p *ngIf="people.length>0">{{ people | json }}</p>
+<p >{{ people | json }}</p>
 
 <div *ngIf="people.length>0">
         <ul  *ngFor="let person of people; trackBy: getPerson">

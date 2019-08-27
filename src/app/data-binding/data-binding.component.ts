@@ -1,6 +1,4 @@
 import { Component, Input, OnInit, Output} from '@angular/core';
-import { ParentToChildService } from '../../services/parentToChild.service';
-import { DataBindingChildComponent } from '../data-binding-child/data-binding-child.component';
 
 
 @Component({
@@ -15,9 +13,10 @@ export class DataBindingComponent {
     
     sentPerson: object; 
     receivedRandomNumber : number;
+    receivedNumberOfPeople: number;
 
-    constructor(private send: ParentToChildService){
-        this.send=send;
+    constructor(){
+       
  
     }
 
@@ -27,8 +26,13 @@ export class DataBindingComponent {
 
     submitForm(myForm) {
         this.sentPerson = myForm.value;
-        console.log(this.sentPerson)
-        this.send
+        //console.log(this.sentPerson)
+        myForm.reset()
+        
+    }
+
+    receiveNumberOfPeople(number: number):void{
+        this.receivedNumberOfPeople=number;
     }
 
     receiveRandomNumber(number: number):void{
@@ -36,7 +40,9 @@ export class DataBindingComponent {
         this.receivedRandomNumber=number;
     }
 
-    
+    clearForm(myForm){
+        myForm.reset()
+    }
 
     
 }
