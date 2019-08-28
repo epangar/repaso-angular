@@ -14,8 +14,9 @@ import { PipesComponent } from './pipes/pipes.component';
 import { LazyComponent } from './lazy-loading/lazy.component';
 import { NasaDataComponent } from './nasa-data/nasa-data.component';
 import { NasaImgComponent } from './nasa-img/nasa-img.component';
-import { DataBindingComponent } from './data-binding/data-binding.component'
-import { DataBindingChildComponent } from './data-binding-child/data-binding-child.component'
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DataBindingChildComponent } from './data-binding-child/data-binding-child.component';
+import { UrlParamsComponent } from './url-params/url-params.component';
 
 //Services
 import { ListService } from '../services/list.service'; 
@@ -24,8 +25,11 @@ import { NasaService } from '../services/nasa.service';
 import { ParentToChildService } from "../services/parentToChild.service";
 
 //Pipes
+
 import { LeetPipe } from '../app/pipes/catalogue/leet.pipe';
+import { AlternatePipe } from '../app/pipes/catalogue/alternate.pipe';
 import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
+import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
 
 
 
@@ -45,6 +49,9 @@ import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
     PipesComponent,
     LeetPipe,
     ReversePipe,
+    AlternatePipe,
+    UrlParamsComponent,
+    UrlParamsIdComponent,
     
   ],
   imports: [

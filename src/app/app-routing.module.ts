@@ -6,6 +6,8 @@ import { LazyComponent } from './lazy-loading/lazy.component';
 import { ScreenComponent } from './screen/screen.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { UrlParamsComponent } from './url-params/url-params.component';
+import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
 
 const routes: Routes = [
 
@@ -16,6 +18,9 @@ const routes: Routes = [
   {path: "lazy", component: LazyComponent},
   {path: "comunication", component: DataBindingComponent},
   {path: "pipes", component: PipesComponent},
+  {path: "url-param", component: UrlParamsComponent},
+  {path: "url-param/contact/:id", component: UrlParamsIdComponent},
+  
  
 ];
 

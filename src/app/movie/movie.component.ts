@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 
 export class MovieComponent implements OnInit {
   
-  @Input()   movies: any[];
+  //@Input()   
+  movies: any[];
   movie: any;
   route: string;
 

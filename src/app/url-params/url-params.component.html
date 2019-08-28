@@ -1,0 +1,3 @@
+<div *ngFor="let contact of phoneBook">
+  <a [routerLink]="['contact', contact.id]">{{contact.name}} {{contact.surname}}</a>
+</div>
