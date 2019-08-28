@@ -1,18 +1,20 @@
 <!--component html goes here -->
-<p *ngIf="people.length>0">List of people</p>
-<button *ngIf="people.length>0" (click)="emitNumber()"></button>
-<p >{{ people | json }}</p>
+<p>List of people:</p>
+<p *ngIf="people.length===0"> (Currently, the list is empty)</p>
+<button *ngIf="people.length>0" (click)="emitNumber()">Emit random value to parent!</button>
+
 
 <div *ngIf="people.length>0">
         <ul  *ngFor="let person of people; trackBy: getPerson">
             <li>
                 <ul>
-                        <li>{{ people.firstName }}</li>
-                        <li>{{ people.surname }}</li>
-                        <li>{{ people.age }}</li>
-                        <li>{{ people.email }}</li>
-                        
+                        <li>{{ person.firstName }}</li>
+                        <li>{{ person.surname }}</li>
+                        <li>{{ person.age }}</li>
+                        <li>{{ person.email }}</li>
+                        <button (click)="delete(person)">Delete!</button>
                 </ul>
             </li>    
         </ul>
+        
 </div>

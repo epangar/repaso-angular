@@ -10,85 +10,72 @@ import { Person } from '../../classes/Person';
     templateUrl: 'data-binding-child.component.html',
     styleUrls: ['../../styles/_data-binding-child.component.scss']
 })
-export class DataBindingChildComponent {
+export class DataBindingChildComponent implements OnInit{
     
     randomNumber: number;
-    
+    _receivedPerson: Person;
+    people: Person[] = [];
 
     constructor() {
         
     }
 
-    private _sentPerson={}
-    private _people=[]
+
 
     @Input() 
     
-    set sentPerson(sentPerson: Person) {
-        debugger
-        this._sentPerson=sentPerson;
-        console.log(this)
+    set receivedPerson(sentPerson: Person){
         
-        console.log(this.people)
-    };
-
-    get sentPerson(): Person {
-        return this._sentPerson;
+        
+        this.people.push(sentPerson);
+        if(this.people.includes(undefined)){
+            this.people=this.people.filter(e=>e!==undefined)
+        }
+        (this.emitLength())
     }
 
-    @Input() 
+    get receivedPerson(){
+        
+        return this.people;
+    }
+
+
     
-    set people(people : Array<Person>) {
-        debugger
-        this._people=people;
-        console.log(this);
-        this._people.push(this._sentPerson);
-    }
-
-    get people(): Array<Person> {
-        return this._people;
-    }
-
-   
     
     @Output() randomNumberToEmit: EventEmitter<number> = new EventEmitter<number>();
     @Output() numberOfPeople: EventEmitter<number> = new EventEmitter<number>();
 
 
     ngOnInit() {
-        console.log(this)
-        this._sentPerson={}
-        this._people=[];
         
-        //(this.emitNumber());
+        (this.emitLength())
     }
 
     
 
+    delete(person: Person){
+        this.people=this.people.filter(p=>p!==person);
 
+        (this.emitLength());
+    }
 
     personTracker(index: number, person: any){
         return person.id;
     }
 
-    ngOnChanges(changes: SimpleChanges){
-        
-        console.log(this);
-        (this.emitNumber());
-        
-    }
+
 
     emitLength(){
+        
         this.numberOfPeople.emit(this.people.length)
     }
+
     emitNumber(){
-        
-         if(this.people.length>1){
+
             this.randomNumber = Math.floor(Math.random()*100);
-            console.log(this.randomNumber)
+            
             this.randomNumberToEmit.emit(this.randomNumber)
-         }
-        
+
     }
     
 }

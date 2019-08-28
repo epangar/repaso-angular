@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: "movies", component: MovieComponent},
   {path: "chuck", component: ChuckComponent},
   {path: "lazy", component: LazyComponent},
-  {path: "data-binding", component: DataBindingComponent},
+  {path: "comunication", component: DataBindingComponent},
   {path: "pipes", component: PipesComponent},
  
 ];

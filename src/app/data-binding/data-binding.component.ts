@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output} from '@angular/core';
+import { DataBindingChildComponent } from '../data-binding-child/data-binding-child.component';
 
 
 @Component({

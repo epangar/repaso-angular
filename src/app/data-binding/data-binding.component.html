@@ -28,13 +28,13 @@
     </div>
 
     <p>There are currently {{ receivedNumberOfPeople }} people on the list.</p>
-    <p>The last person's random number: {{ receivedRandomNumber }} </p>
+    <p>The last random number: {{ receivedRandomNumber }} </p>
 
 </form>
 
 
 <data-binding-child 
-    [people]="sentPerson" 
+    [receivedPerson]="sentPerson" 
     (randomNumberToEmit)="receiveRandomNumber($event)"
     (numberOfPeople)="receiveNumberOfPeople($event)"></data-binding-child>
 
