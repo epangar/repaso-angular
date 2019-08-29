@@ -9,19 +9,18 @@ import { PhoneBook } from '../../data/phonebook';
 })
 export class UrlParamsIdComponent implements OnInit {
   contact: object;
-  // contactId: number;
+  
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params
       .subscribe((params)=>{
-        
-        // this.contactId = ;
+
         this.contact = PhoneBook[params['id']];
-        
+
       });
-    console.log(this)
+    
   }
 
 

@@ -4,10 +4,12 @@ import { MovieComponent } from './movie/movie.component';
 import { ChuckComponent } from './chuck/chuck.component';
 import { LazyComponent } from './lazy-loading/lazy.component';
 import { ScreenComponent } from './screen/screen.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
+import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { UrlParamsComponent } from './url-params/url-params.component';
 import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
+import { ClassesComponent } from './classes/classes.component';
+
 
 const routes: Routes = [
 
@@ -16,11 +18,11 @@ const routes: Routes = [
   {path: "movies", component: MovieComponent},
   {path: "chuck", component: ChuckComponent},
   {path: "lazy", component: LazyComponent},
-  {path: "comunication", component: DataBindingComponent},
+  {path: "comunication", component: CommunicationParentComponent},
   {path: "pipes", component: PipesComponent},
   {path: "url-param", component: UrlParamsComponent},
   {path: "url-param/contact/:id", component: UrlParamsIdComponent},
-  
+  {path: "classes", component: ClassesComponent}
  
 ];
 

@@ -1,28 +1,28 @@
-<form class="data-binding__form" (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+<form class="communication-parent__form" (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
 
     <!-- {{ myForm.value | json }} -->
 
-    <div class="data-binding__form-row">
+    <div class="communication-parent__form-row">
         <p>Name:</p>
         <input type="text" name = "firstName" ngModel  minlength="2" required>
     </div>
     
-    <div class="data-binding__form-row" >
+    <div class="communication-parent__form-row" >
         <p>Surname:</p>
         <input type="text" name = "surname" ngModel  required>
     </div>
     
-    <div class="data-binding__form-row" >
+    <div class="communication-parent__form-row" >
         <p>Age:</p>
         <input type="number" name = "age" ngModel  required>
     </div>
     
-    <div class="data-binding__form-row" >
+    <div class="communication-parent__form-row" >
         <p>Email:</p>
         <input type="email" name = "email" ngModel required>
     </div>
     
-    <div class="data-binding__form-row margin-top-30">
+    <div class="communication-parent__form-row margin-top-30">
         <button (click)="clearForm(this)">Clear</button>
         <button type='submit' >Submit!</button>
     </div>
@@ -33,9 +33,9 @@
 </form>
 
 
-<data-binding-child 
+<communication-child 
     [receivedPerson]="sentPerson" 
     (randomNumberToEmit)="receiveRandomNumber($event)"
-    (numberOfPeople)="receiveNumberOfPeople($event)"></data-binding-child>
+    (numberOfPeople)="receiveNumberOfPeople($event)"></communication-child>
 
 

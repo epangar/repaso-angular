@@ -6,9 +6,9 @@ import { Person } from '../../classes/Person';
 
 
 @Component({
-    selector: 'data-binding-child',
-    templateUrl: 'data-binding-child.component.html',
-    styleUrls: ['../../styles/_data-binding-child.component.scss']
+    selector: 'communication-child',
+    templateUrl: 'communication-child.component.html',
+    styleUrls: ['../../styles/_communication-child.scss']
 })
 export class DataBindingChildComponent implements OnInit{
     

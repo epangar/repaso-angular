@@ -14,9 +14,10 @@ import { PipesComponent } from './pipes/pipes.component';
 import { LazyComponent } from './lazy-loading/lazy.component';
 import { NasaDataComponent } from './nasa-data/nasa-data.component';
 import { NasaImgComponent } from './nasa-img/nasa-img.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { DataBindingChildComponent } from './data-binding-child/data-binding-child.component';
+import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
+import { DataBindingChildComponent } from './communication-child/communication-child.component';
 import { UrlParamsComponent } from './url-params/url-params.component';
+import { ClassesComponent } from './classes/classes.component';
 
 //Services
 import { ListService } from '../services/list.service'; 
@@ -45,13 +46,14 @@ import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
     NasaDataComponent,
     NasaImgComponent,
     DataBindingChildComponent,
-    DataBindingComponent,
+    CommunicationParentComponent,
     PipesComponent,
     LeetPipe,
     ReversePipe,
     AlternatePipe,
     UrlParamsComponent,
     UrlParamsIdComponent,
+    ClassesComponent,
     
   ],
   imports: [

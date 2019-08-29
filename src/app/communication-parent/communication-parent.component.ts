@@ -1,16 +1,16 @@
 import { Component, Input, OnInit, Output} from '@angular/core';
-import { DataBindingChildComponent } from '../data-binding-child/data-binding-child.component';
+import { DataBindingChildComponent } from '../communication-child/communication-child.component';
 
 
 @Component({
-    selector: 'data-binding',
-    templateUrl: 'data-binding.component.html',
-    styleUrls: ['../../styles/_data-binding.scss']
+    selector: 'communication-parent',
+    templateUrl: 'communication-parent.component.html',
+    styleUrls: ['../../styles/_communication-parent.scss']
 })
 
 
 
-export class DataBindingComponent {
+export class CommunicationParentComponent {
     
     sentPerson: object; 
     receivedRandomNumber : number;
