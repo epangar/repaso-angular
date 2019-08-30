@@ -14,6 +14,7 @@ export class UrlParamsIdComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.clear()
     this.route.params
       .subscribe((params)=>{
 

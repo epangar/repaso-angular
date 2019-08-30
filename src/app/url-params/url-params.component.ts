@@ -19,7 +19,7 @@ export class UrlParamsComponent implements OnInit {
   }
   
   ngOnInit() {
-    
+    console.clear()
   }
 
   viewDetails(id){
