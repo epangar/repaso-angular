@@ -4,22 +4,22 @@
   <h1 class="app__title">
     Welcome to {{ title }}!
   </h1>
-  <nav>
-    <a routerLink="/home" class="margin-link">Home</a>
-    <a routerLink="/movies" class="margin-link">Movies</a>
-    <a routerLink="/chuck" class="margin-link">Chuck</a>
-    <a routerLink="/pipes" class="margin-link">Pipes</a>
-    <a routerLink="/lazy" class="margin-link">Lazy loading</a>
-    <a routerLink="/comunication" class="margin-link">Comunication</a>
-    <a routerLink="/url-param" class="margin-link">Url Param</a>
-    <a routerLink="/classes" class="margin-link">Classes</a>
-    
-  </nav>
-  <div class="frame" >
-      <router-outlet></router-outlet>  
-    
+  <div class="app__block">
+    <nav class="app__nav">
+      <a routerLink="/home" class="margin-link">Home</a>
+      <a routerLink="/movies" class="margin-link">Movies</a>
+      <a routerLink="/chuck" class="margin-link">Chuck</a>
+      <a routerLink="/pipes" class="margin-link">Pipes</a>
+      <a routerLink="/lazy" class="margin-link">Lazy loading</a>
+      <a routerLink="/comunication" class="margin-link">Comunication</a>
+      <a routerLink="/url-param" class="margin-link">Url Param</a>
+      <a routerLink="/classes" class="margin-link">Classes</a>
+      
+    </nav>
+    <div class="frame" >
+        <router-outlet></router-outlet>  
+    </div>
   </div>
-  
 </div>
 
 

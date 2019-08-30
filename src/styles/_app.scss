@@ -3,4 +3,14 @@
     color: darkblue;
   }
 
+  &__nav{
+    
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__block{
+    display: flex;
+  }
+
 }

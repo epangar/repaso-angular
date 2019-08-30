@@ -30,12 +30,12 @@ export class ClassesComponent implements OnInit {
     
     let bat = new Bat();
 
-    let bird: Bird = new Bird();
+    let bird: Bird = new Bird(true, 2, false, false, true, "Earth");
 
     let croc: Crocodile = new Crocodile();
 
     let eagle: Bird = new Eagle()
-    let reptile: Reptile = new Reptile();
+    let reptile: Reptile = new Reptile(true, 4, true, false, false, "Earth");
 
     console.log(animal,bat, bird, croc, eagle, reptile)
   }
