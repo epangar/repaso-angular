@@ -12,8 +12,6 @@ import { MovieComponent } from './movie/movie.component';
 import { ChuckComponent } from './chuck/chuck.component';
 import { PipesComponent } from './pipes/pipes.component';
 // import { LazyComponent } from './lazy-loading/lazy.component';
-// import { NasaDataComponent } from './nasa-data/nasa-data.component';
-// import { NasaImgComponent } from './nasa-img/nasa-img.component';
 import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
 import { DataBindingChildComponent } from './communication-child/communication-child.component';
 import { UrlParamsComponent } from './url-params/url-params.component';

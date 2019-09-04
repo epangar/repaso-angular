@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: "url-param/contact/:id", component: UrlParamsIdComponent},
   {path: "classes", component: ClassesComponent},
   {path: "lazy", loadChildren: './lazy-loading/lazy.module#LazyLoadingModule' },
-  
+ 
  
 ];
 
