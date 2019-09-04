@@ -13,6 +13,7 @@ export class NasaDataComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -1,19 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NasaDataComponent } from '../nasa-data/nasa-data.component';
+import { LazyComponent } from '../lazy-loading/lazy.component';
 
 const routes: Routes = [
   {
     path: "",
-    children: [
-      {
-        path: "data",
-        loadChildren: '../nasa-data/nasa-data.module#NasaDataModule'
-      },
-      {
-        path: "img",
-        loadChildren: '../nasa-img/nasa-img.module#NasaImgModule'
-      }
+    component: LazyComponent,
+    children:[
+      {path: 'data', loadChildren:  './nasa-data/nasa-data.module#NasaDataModule'},
+      {path: 'img', loadChildren: './nasa-img/nasa-img.module#NasaImgModule'}
     ]
   }
 ];
@@ -22,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class NasaDataRoutingModule { }
+export class LazyRoutingModule { }

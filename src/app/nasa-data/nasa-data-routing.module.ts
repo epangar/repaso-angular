@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NasaDataComponent } from '../nasa-data/nasa-data.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: "/data",
+    component: NasaDataComponent,
   }
 ];
 
