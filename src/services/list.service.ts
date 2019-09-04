@@ -3,8 +3,6 @@ import { HttpClient, HttpResponse } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from 'rxjs/operators';
 
-
-
 @Injectable()
 export class ListService {
   URL: string = "https://ghibliapi.herokuapp.com/films";

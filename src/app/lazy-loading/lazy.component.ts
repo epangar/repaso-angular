@@ -74,7 +74,7 @@ export class LazyComponent implements OnInit {
       })
   }
 
-  toggleData = () => this.showData = !this.showData
+  toggleData = () => this.showData = !this.showData;
   toggleImg = () => this.showImg = !this.showImg;
 
  clean(){

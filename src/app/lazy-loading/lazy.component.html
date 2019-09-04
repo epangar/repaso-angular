@@ -1,10 +1,10 @@
 <button (click)="getAll()">Get the NASA API content</button>
 <button (click)="clean()">Clean</button>
-
+<label><input type="checkbox" (change)="toggleData()"  > Show data</label><app-nasa-data *ngIf="this.showData===true"></app-nasa-data>
+<label><input type="checkbox" (change)="toggleImg()" > Show Image</label><app-nasa-img  *ngIf="this.showImg===true"></app-nasa-img>
+  
 
 <div *ngFor="let n of nasa" class="nasa__card">
   <p>{{n.number}}) {{n.name}}: {{n.full_name}}</p>
-  <input type="checkbox" > <app-nasa-data></app-nasa-data>
-  <input type="checkbox" ><app-nasa-img></app-nasa-img>
   
 </div>
