@@ -1,12 +1,13 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { LazyComponent } from './lazy.component';
-import { NasaDataRoutingModule } from '../nasa-data/nasa-data-routing.module';
-import { NasaImgRoutingModule } from '../nasa-img/nasa-img-routing.module';
+import { LazyRoutingModule } from '../lazy-loading/lazy-routing.module';
 
 
 @NgModule({
-    imports: [CommonModule, NasaDataRoutingModule, NasaImgRoutingModule],
-    declarations: []
+    imports: [CommonModule, LazyRoutingModule],
+    declarations: [LazyComponent]
   })
-  export class PostsModule {}
+  export class LazyLoadingModule {
+      
+  }

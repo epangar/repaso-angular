@@ -6,10 +6,6 @@ const routes: Routes = [
   {
     path: "",
     component: LazyComponent,
-    children:[
-      {path: 'data', loadChildren:  './nasa-data/nasa-data.module#NasaDataModule'},
-      {path: 'img', loadChildren: './nasa-img/nasa-img.module#NasaImgModule'}
-    ]
   }
 ];
 
