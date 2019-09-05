@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output} from '@angular/core';
 import { DataBindingChildComponent } from '../communication-child/communication-child.component';
+import { NgModel, NgForm} from '@angular/forms';
 
 
 @Component({
@@ -25,10 +26,11 @@ export class CommunicationParentComponent {
         console.clear()
     }
 
-    submitForm(myForm) {
+    submitForm(myForm: NgForm) {
+        console.log(myForm)
         this.sentPerson = myForm.value;
         //console.log(this.sentPerson)
-        myForm.reset()
+        myForm.resetForm()
         
     }
 
@@ -41,9 +43,9 @@ export class CommunicationParentComponent {
         this.receivedRandomNumber=number;
     }
 
-    clearForm(myForm){
+    clearForm(myForm: NgForm){
         
-        myForm.reset(null, { emitEvent: false })
+        myForm.resetForm()
     }
 
     

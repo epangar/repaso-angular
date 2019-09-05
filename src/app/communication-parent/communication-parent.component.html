@@ -1,4 +1,4 @@
-<form class="communication-parent__form" (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+<form #myForm="ngForm" (submit)="submitForm(myForm);" class="communication-parent__form" >
 
     <!-- {{ myForm.value | json }} -->
 
@@ -23,8 +23,8 @@
     </div>
     
     <div class="communication-parent__form-row margin-top-30">
-        <button (click)="clearForm(this)">Clear</button>
-        <button type='submit' >Submit!</button>
+        <button type="reset">Clear</button>
+        <button type='submit'  >Submit!</button>
     </div>
 
     <p>There are currently {{ receivedNumberOfPeople }} people on the list.</p>
