@@ -6,6 +6,7 @@ import { LazyComponent } from './lazy-loading/lazy.component';
 import { NasaDataComponent } from './nasa-data/nasa-data.component';
 import { NasaImgComponent } from './nasa-img/nasa-img.component';
 import { ScreenComponent } from './screen/screen.component';
+import { ChartComponent } from './chart/chart.component';
 import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { UrlParamsComponent } from './url-params/url-params.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: "url-param", component: UrlParamsComponent},
   {path: "url-param/contact/:id", component: UrlParamsIdComponent},
   {path: "classes", component: ClassesComponent},
+  {path: "chart", component: ChartComponent},
   {path: "lazy", loadChildren: './lazy-loading/lazy.module#LazyLoadingModule' },
  
  

@@ -1,0 +1,40 @@
+<div class="chart">
+  <form #myForm="ngForm" (submit)="submitForm(myForm)" class="chart__form">
+    
+      <p>Seats <input  name ="seatsToFill" ngModel ngDefaultControl   type="number" min="1" max="100" required></p>
+    
+      
+      <p>Algorithm
+        <select  name = "algorithm" ngModel ngDefaultControl  required>
+            <option value="D'Hont">D'Hont</option>
+            <option value="Saint-League">Saint-League</option>
+        </select>
+      </p>
+    
+    
+        <p  name = "minimum" ngModel ngDefaultControl  required>Minimum % <input type="number" min="1" max="49"></p>
+    
+    <table>
+      <tr>
+        <th>Party</th>
+        <th>Votes</th>
+        <th>+1</th>
+        <th>Remove</th>
+      </tr>
+      <tr *ngFor="let line of repeatAskVotes; let i = index" name = "myTable" [(ngModel)]="tablita" ngDefaultControl >
+          <td> <input   class="chart__form-input" type="text" required> </td>
+          <td> <input   class="chart__form-input" type="text" required> </td> 
+          <td><button type="button"(click)="addOne()">+</button></td>
+          <td><button type="button"(click)="remove(i)">-</button></td>
+      </tr>
+    </table>
+  
+    <button type='submit' >Calculate!</button>
+    
+  </form>
+  <div class="chart__canvas-container">
+    <canvas class="chart__canvas" width="300" height="300"></canvas>
+  </div>
+</div>
+
+<p *ngIf="finalResults.length>0">{{ finalResults | json }}</p>

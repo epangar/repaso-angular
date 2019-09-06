@@ -1,0 +1,25 @@
+.chart{
+    display: flex;
+
+    &__canvas{
+        border: 1px solid red;
+        
+
+        &__container{
+            width: 50%;
+            padding-left: 50px;
+        }
+    }
+    &__form{
+        max-width: 45%;
+
+        &-input{
+            width: 80%;
+
+            // &-seats{
+            //     width: 50px;
+            // }
+        }
+    }
+}
+

@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { EnvServiceProvider } from '../services/env.service.provider';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule }   from '@angular/forms'; 
+import { FormsModule }   from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
+
 
 //Components
 import { AppComponent } from './app.component';
@@ -16,6 +18,8 @@ import { CommunicationParentComponent } from './communication-parent/communicati
 import { DataBindingChildComponent } from './communication-child/communication-child.component';
 import { UrlParamsComponent } from './url-params/url-params.component';
 import { ClassesComponent } from './classes/classes.component';
+import { ChartComponent } from './chart/chart.component';
+
 
 //Services
 import { ListService } from '../services/list.service'; 
@@ -52,6 +56,7 @@ import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
     UrlParamsComponent,
     UrlParamsIdComponent,
     ClassesComponent,
+    ChartComponent,
     
   ],
   imports: [
@@ -59,6 +64,7 @@ import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ChartsModule
     
   ],
   providers: [ 
