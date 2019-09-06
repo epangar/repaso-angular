@@ -14,21 +14,16 @@
     
         <p  name = "minimum" ngModel ngDefaultControl  required>Minimum % <input type="number" min="1" max="49"></p>
     
-    <table>
-      <tr>
-        <th>Party</th>
-        <th>Votes</th>
-        <th>+1</th>
-        <th>Remove</th>
-      </tr>
-      <tr *ngFor="let line of repeatAskVotes; let i = index" name = "myTable" [(ngModel)]="tablita" ngDefaultControl >
-          <td> <input   class="chart__form-input" type="text" required> </td>
-          <td> <input   class="chart__form-input" type="text" required> </td> 
-          <td><button type="button"(click)="addOne()">+</button></td>
-          <td><button type="button"(click)="remove(i)">-</button></td>
-      </tr>
-    </table>
-  
+    
+      
+
+      
+          <p>Party <input name = "party" [(ngModel)]="currentParty.party" class="chart__form-input" type="text"    required> </p>
+          <p>Votes <input name = "votes" [(ngModel)]="currentParty.votes" class="chart__form-input" type="number"  required> </p> 
+          
+      
+    
+    <button type="button"(click)="addOne()">+ 1 Party</button>
     <button type='submit' >Calculate!</button>
     
   </form>
@@ -37,4 +32,6 @@
   </div>
 </div>
 
-<p *ngIf="finalResults.length>0">{{ finalResults | json }}</p>
+<ul class="chart__list" *ngFor="let party of finalResults; let i=index;" >
+  <li>{{ party.party | json }}:{{ party.votes | json }} <button type="button"(click)="remove(i)">Remove</button></li>
+</ul> 

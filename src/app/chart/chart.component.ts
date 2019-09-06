@@ -13,11 +13,14 @@ import { Chart, ChartData, Point, ChartColor } from 'chart.js';
 
 export class ChartComponent implements OnInit {
 
+  algorithm:string
   totalSeats:number = 0;
-  repeatAskVotes: object[] = [
-    { party: "", votes: ""},
-  ];
-  finalResults: Partyvotes[] = [];
+  
+  currentParty: Partyvotes = {
+    party:"",
+    votes:"",
+  }
+  finalResults: Partyvotes[] =[]
   
 
   constructor() { 
@@ -30,17 +33,18 @@ export class ChartComponent implements OnInit {
   }
 
   addOne(){
-    this.repeatAskVotes.push({ party: "", votes: ""})
+    debugger
+    this.finalResults.push(this.currentParty)
+    this.currentParty = {
+      party:"",
+      votes:"",
+    }
+    return  
   }
 
   remove(index: number){
-    if(this.repeatAskVotes.length===1){
-      return;
-    } else {
-      this.repeatAskVotes=this.repeatAskVotes
-                              .filter((object)=>this.repeatAskVotes.indexOf(object)!==index)
-    }
-    
+    this.finalResults=this.finalResults
+                              .filter((object)=>this.finalResults.indexOf(object)!==index)
   }
 
   submitForm(myForm: NgForm) {
