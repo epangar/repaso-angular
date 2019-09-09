@@ -3,7 +3,7 @@
 
     &__canvas{
         border: 1px solid red;
-        
+        margin-left: 25%;
 
         &__container{
             width: 50%;
@@ -23,7 +23,34 @@
     }
 
     &__list{
-        max-width: 100px;
+        max-width: 150px;
+        list-style-type: none;
+        &-container{
+            overflow: scroll;
+            height: 100px;
+            max-height: 100px;
+            max-width: 50%;
+            
+        }
+        
+    }
+
+    &__seats{
+        max-width: 150px;
+        list-style-type: none;
+        &-container{
+            overflow: scroll;
+            height: 100px;
+            max-height: 100px;
+            max-width: 50%;
+            
+        }
+    }
+
+    &__ul{
+        &-row{
+            border: 1px solid blue;
+        }
     }
 }
 
