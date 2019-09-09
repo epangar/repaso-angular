@@ -1,17 +1,18 @@
 <button class="buttons__GET" (click)="getMovies()">Get all the movies!</button>
 <button class="buttons__GET" (click)="clean()">Clean!</button>
-<button class="buttons__GET" (click)="addMovietoMyMovies()">Add a movie!</button>
-<button class="buttons__GET" (click)="getMyMovies()" *ngIf='this.movies.length>0'>Get my movies</button>
-
+<!-- <button class="buttons__GET" (click)="getMyMovies()" *ngIf='this.movies.length>0'>Get my movies</button> -->
+<select [(ngModel)]="selectedKey" (change)="changeDirective()">
+  <option  *ngFor="let key of selectValueKeys; let i=index"   > {{ key }}</option>
+</select>
 
 
   <div *ngFor="let movie of movies; trackBy: trackById" class="frame__card">
-    <div [ngClass]="{'fizzbuzz': movie.number%15===0, 
-                    'fizz': movie.number%5===0, 
-                    'buzz': movie.number%3===0}">
+    <div [ngClass]="{'fizzbuzz': movie.number%currentFizzBuzz===0, 
+                    'fizz': movie.number%currentFizz===0, 
+                    'buzz': movie.number%currentBuzz===0}">
         <p class="frame__name"> {{movie.number}}-{{movie.title | json}} </p>
         <p class="frame__plot"> {{movie.description | json}} </p>
-        <p  *ngIf='getRandomIdValue(movie.id)%2===0'> {{ movie.id  }}</p>
+        
         <button (click)="delete(movie)">Delete</button>
     </div>  
   </div>
