@@ -26,10 +26,10 @@
         max-width: 150px;
         list-style-type: none;
         &-container{
-            overflow: scroll;
+            // overflow: scroll;
             height: 100px;
             max-height: 100px;
-            max-width: 50%;
+            width: 50%;
             
         }
         
@@ -39,10 +39,10 @@
         max-width: 150px;
         list-style-type: none;
         &-container{
-            overflow: scroll;
+            // overflow: scroll;
             height: 100px;
             max-height: 100px;
-            max-width: 50%;
+            width: 50%;
             
         }
     }
@@ -50,6 +50,9 @@
     &__ul{
         &-row{
             border: 1px solid blue;
+            display: flex;
+            overflow: scroll;
+            height: fit-content;
         }
     }
 }

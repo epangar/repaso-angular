@@ -19,7 +19,7 @@
       <p>Votes <input name = "votes" [(ngModel)]="currentParty.votes" class="chart__form-input" type="number"  required> </p> 
             
       <button type="button"(click)="addOne()">+ 1 Party</button>
-      <button type='button' (submit)="submitForm(myForm)">Calculate!</button>
+      <button type='button' (click)="calculate()">Calculate!</button>
       
   </div>
   <div class="chart__canvas-container">
@@ -34,15 +34,19 @@
 
 
 <div class="chart__ul-row">
+
   <div class="chart__list-container">
-    <ul class="chart__list" *ngFor="let party of finalResults; let i=index;" >
-      <li>{{ party.party | json }}:{{ party.votes | json }} <button type="button"(click)="remove(i)">Remove</button></li>
-    </ul> 
+    <p>Votes</p>
+    <ul class="chart__list" *ngFor="let party of finalResults; let i=index;">
+      <li>{{ party.party | json }}:{{ party.votes | json }} <button type="button" (click)="remove(i)">Remove</button>
+      </li>
+    </ul>
   </div>
-  
+
   <div class="chart__seats-container">
-    <ul class="chart__list" *ngFor="let party of partiesWithSeats; let i=index;">
-      <li>{{ party.party | json }}:{{ party.votes | json }}</li>
+    <p>Final seats</p>
+    <ul class="chart__list" *ngFor="let party of finalComposition; let i=index;">
+      <li>{{ party[0] | json }}:{{ party[1] | json }}</li>
     </ul>
   </div>
 </div>

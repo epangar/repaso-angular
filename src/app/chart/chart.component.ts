@@ -17,8 +17,8 @@ export class ChartComponent implements OnInit {
   totalSeats:number = 0;
   totalValidVotes:number=0;
   minimum:number=0;
-  partiesWithSeats:Partyvotes[];
-  finalComposition:Partyvotes[];
+  partiesWithSeats:Partyvotes[]=[];
+  finalComposition:Partyvotes[]=[];
 
   currentParty: Partyvotes = {
     party:"",
@@ -38,14 +38,15 @@ export class ChartComponent implements OnInit {
   }
 
   addOne(){
-    debugger
+    
     this.finalResults.push(this.currentParty)
     this.currentParty = {
       party:"",
       votes:"",
     };
-    (this.getValidVotes(this.finalResults));
+    this.getValidVotes(this.finalResults);
     this.whoGetsSeats(this.finalResults, this.minimum);
+    
     return  
   }
 
@@ -56,14 +57,11 @@ export class ChartComponent implements OnInit {
     (this.getValidVotes(this.finalResults));
   }
 
-  submitForm(myForm: NgForm) {
+  calculate() {
     debugger
-    console.log(myForm.value)
-    console.log(NgModel)
-    this.finalResults=[];
-    this.finalResults=myForm.value;
-    console.log(this.finalResults);
-    this.getValidVotes(this.finalResults);
+    // this.finalResults=[];
+    // console.log(this.finalResults);
+    // this.getValidVotes(this.finalResults);
     this.getComposition(this.partiesWithSeats, this.algorithm, this.totalSeats)
 }
 
@@ -81,18 +79,19 @@ export class ChartComponent implements OnInit {
   }
   
   getComposition(partiesWithSeats:Partyvotes[], algorithm:string, seats:number ){
-
-    let divisor:number=1, simulatedArray:Partyvotes[]=[], dividedVotes:Partyvotes[]=[];
+    
+    let divisor:number=1, simulatedArray:Partyvotes[]=[], dividedVotes:Partyvotes[]=[], hash={};
 
     while(this.finalComposition.length < seats){
-        debugger
-        dividedVotes=this.partiesWithSeats.map(party=>{
+        
+        dividedVotes=partiesWithSeats.map(party=>{
                                                         party['votes']/=divisor;
                                                         return party;
                                                         })
         dividedVotes.forEach(party=>{
             simulatedArray.push(party);
-            simulatedArray.sort((a,b)=>a['votes']-b['votes'])  
+            simulatedArray.sort((a,b)=>b['votes']-a['votes'])
+            this.finalComposition=simulatedArray.map(obj=>obj)
         })
 
         if(algorithm==="D'Hont"){
@@ -104,6 +103,19 @@ export class ChartComponent implements OnInit {
         
     }
     
+    this.finalComposition=this.finalComposition.slice(0,seats);
+
+    this.finalComposition.forEach(arr=>{
+      let key=arr['party']
+      if(hash[key]){
+        hash[key]++;
+      } else {
+        hash[key]=1;
+      }
+    })
+
+    this.finalComposition=Object.entries(hash)
+
 
 
 }
