@@ -22,9 +22,12 @@
       <button type='button' (click)="calculate()">Calculate!</button>
       
   </div>
-  <!-- <div class="chart__canvas-container">
-    <canvas class="chart__canvas" width="200" height="200"></canvas>
-  </div> -->
+  <div class="chart__canvas-container">
+    <p>Final seats</p>
+    <ul class="chart__list" *ngFor="let party of finalComposition; let i=index;">
+      <li>{{ party[0] | json }}:{{ party[1] | json }}</li>
+    </ul>
+  </div>
 </div>
 
 
@@ -44,9 +47,6 @@
   </div>
 
   <div class="chart__seats-container">
-    <p>Final seats</p>
-    <ul class="chart__list" *ngFor="let party of finalComposition; let i=index;">
-      <li>{{ party[0] | json }}:{{ party[1] | json }}</li>
-    </ul>
+    
   </div>
 </div>

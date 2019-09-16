@@ -80,13 +80,15 @@ export class ChartComponent implements OnInit {
   
   getComposition(partiesWithSeats:Partyvotes[], algorithm:string, seats:number ){
     
-    let divisor:number=1, simulatedArray:Partyvotes[]=[], dividedVotes:Partyvotes[]=[], hash={};
+    let divisor:number=1, simulatedArray:Partyvotes[]=[], hash={};
 
-    while(this.finalComposition.length < seats){
-        
+    while(this.finalComposition.length < seats*3){
+        let dividedVotes:Partyvotes[]=[]
         dividedVotes=partiesWithSeats.map(party=>{
-                                                        party['votes']/=divisor;
-                                                        return party;
+                                                        let obj={}
+                                                        obj['party']= party['party'];
+                                                        obj['votes']= (party['votes']/divisor);
+                                                        return obj;
                                                         })
         dividedVotes.forEach(party=>{
             simulatedArray.push(party);
