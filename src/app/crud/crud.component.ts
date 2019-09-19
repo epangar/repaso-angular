@@ -1,9 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import {DATA} from '../../classes/DATA';
-// debugger
-// import { CrudDataBase } from './table';
-// console.log(CrudDataBase)
 import { map, filter } from 'rxjs/operators';
 
 
@@ -46,11 +43,14 @@ export class CrudComponent implements OnInit {
   getElementByname(input:string){
     
   }
-  getElementByPosition(value){
-    debugger
-    value=parseInt(value)
 
-    if(value===0){
+  valueOfId: number = null;
+  
+  getElementByPosition(valueOfId){
+    debugger
+    valueOfId=parseInt(valueOfId)
+
+    if(valueOfId===0){
       this.myTable = this.CrudDataBase.map(element => element);
       return;
 
@@ -60,7 +60,7 @@ export class CrudComponent implements OnInit {
 
       this.myTable=this.myTable.filter(o => {
         console.log(o); 
-        return o['id']===value;
+        return o['id']===valueOfId;
       });
 
       
