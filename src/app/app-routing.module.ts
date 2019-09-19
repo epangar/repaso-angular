@@ -27,6 +27,7 @@ const routes: Routes = [
   {path: "classes", component: ClassesComponent},
   {path: "chart", component: ChartComponent},
   {path: "lazy", loadChildren: './lazy-loading/lazy.module#LazyLoadingModule' },
+  {path: "crud", loadChildren: './crud/crud.module#CrudModule' },
  
  
 ];

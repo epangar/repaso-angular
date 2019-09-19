@@ -1,0 +1,23 @@
+<p>Name <input type="text"></p>  
+<p>ID <input type="text"></p>  
+<p>Keywords <input type="text"></p>  
+<p>Position <input #myPosition type="number" min="0" max="11" (input)="getElementByPosition(myPosition.value)" ></p>  
+
+
+
+<table>
+  <tr>
+    <th> Name</th>
+    <th> ID</th>
+    <th> Keywords</th>
+    <th> Position</th>
+  </tr>
+
+  <tr *ngFor="let object of myTable">
+    <td> {{object.name | json}}</td>
+    <td> {{object.id | json}}</td>
+    <td> {{object.keywords | json}}</td>
+    <td> {{object.position | json}}</td>
+  </tr>
+
+</table>

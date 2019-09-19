@@ -5,6 +5,7 @@ import { ChuckComponent } from './chuck/chuck.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Router } from '@angular/router';
 import { ScreenComponent } from './screen/screen.component';
+import { DATA } from '../classes/DATA';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent {
   title = 'my Angular demo';
   route: string;
   myCache: Object;
+  
 
   
   
@@ -39,6 +41,7 @@ export class AppComponent {
     // console.log(this.myCache)
   }
 
+    
   
 }
   

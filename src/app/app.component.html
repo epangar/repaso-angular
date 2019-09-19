@@ -15,10 +15,11 @@
       <a routerLink="/url-param" class="margin-link">Url Param</a>
       <a routerLink="/classes" class="margin-link">Classes</a>
       <a routerLink="/chart" class="margin-link">Chart</a>
+      <a routerLink="/crud" class="margin-link">CRUD</a>
       
     </nav>
     <div class="frame" >
-        <router-outlet></router-outlet>  
+        <router-outlet (globalDataBase)="receiveDataBase($event)"></router-outlet>  
     </div>
   </div>
 </div>
