@@ -1,8 +1,8 @@
-<p>Name <input type="text"></p>  
+<p>Name <input #myName type="text" (input)="getElementByname(myName.value)"></p>  
 <p>ID <input type="text"></p>  
-<p>Keywords <input type="text"></p>  
-<p>Position <input  type="number" min="0" max="11" (input)="getElementByPosition(myPosition.value)" ></p>  
-
+<p>Keywords <input #myKeywords type="text" (input)=getKeywords(myKeywords.value)></p>  
+<p>Position <input #myPosition type="number" min="0" max="11" (input)="getElementByPosition(myPosition.value)" ></p>  
+<button (click)="fill()">Refill</button>
 
 
 <table>
