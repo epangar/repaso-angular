@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { EnvServiceProvider } from '../services/env.service.provider';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 
 
@@ -35,6 +35,7 @@ import { LeetPipe } from '../app/pipes/catalogue/leet.pipe';
 import { AlternatePipe } from '../app/pipes/catalogue/alternate.pipe';
 import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
 import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
+//import { ReactiveComponent } from './reactive-form/reactive-form.component';
 // import { LiteratePipe } from './pipes/catalogue/literate.pipe';
 
 
@@ -61,6 +62,7 @@ import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
     UrlParamsIdComponent,
     ClassesComponent,
     ChartComponent,
+    //ReactiveComponent,
     // CrudComponent,
     
   ],
@@ -69,8 +71,12 @@ import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    ReactiveFormsModule
     
+  ],
+  exports: [
+    ReactiveFormsModule
   ],
   providers: [ 
     ListService, 

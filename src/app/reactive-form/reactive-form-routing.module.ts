@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LazyComponent } from '../lazy-loading/lazy.component';
+import { ReactiveComponent } from '../reactive-form/reactive-form.component';
 
 
 
 const routes: Routes = [
   {
     path: "",
-    component: LazyComponent,
-    children : []
+    component: ReactiveComponent,
+    children : [ ]
   }
 ];
 
@@ -16,4 +16,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LazyRoutingModule { }
+export class ReactiveRoutingModule { }
