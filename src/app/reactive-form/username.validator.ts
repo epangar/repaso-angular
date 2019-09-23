@@ -9,8 +9,12 @@ export class UsernameValidators{
     }
 
     static shouldBeUnique(control: AbstractControl): ValidationErrors | null {
-        if(control.value === "mosh")
-            return { shouldBeUnique: true};
+        setTimeout(() => {
+            if(control.value === "mosh")
+                return { shouldBeUnique: true};
+            return null;
+        }, 2000);  
+        
         return null;
     }
 }
