@@ -19,6 +19,8 @@ import { DataBindingChildComponent } from './communication-child/communication-c
 import { UrlParamsComponent } from './url-params/url-params.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ChartComponent } from './chart/chart.component';
+import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
+
 // import { CrudComponent } from './crud/crud.component';
 
 
@@ -34,9 +36,9 @@ import { ParentToChildService } from "../services/parentToChild.service";
 import { LeetPipe } from '../app/pipes/catalogue/leet.pipe';
 import { AlternatePipe } from '../app/pipes/catalogue/alternate.pipe';
 import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
-import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
+import { LiteratePipe } from './pipes/catalogue/literate.pipe';
 //import { ReactiveComponent } from './reactive-form/reactive-form.component';
-// import { LiteratePipe } from './pipes/catalogue/literate.pipe';
+
 
 
 
@@ -57,7 +59,7 @@ import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
     LeetPipe,
     ReversePipe,
     AlternatePipe,
-    // LiteratePipe,
+    LiteratePipe,
     UrlParamsComponent,
     UrlParamsIdComponent,
     ClassesComponent,

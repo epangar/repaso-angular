@@ -52,7 +52,7 @@ export class CrudComponent implements OnInit {
     this.myTable = this.CrudDataBase.map(element => element).filter(element => element['keywords'].includes(input))
   }
   getElementByPosition(valueOfId: any){
-    debugger
+    
     
     valueOfId=parseInt(valueOfId);
     if(valueOfId===0){
@@ -64,7 +64,7 @@ export class CrudComponent implements OnInit {
       this.myTable=this.CrudDataBase.map(o=>o);
 
       this.myTable=this.myTable.filter(o => {
-        debugger
+        
         return o['id']===valueOfId;
       });
 
