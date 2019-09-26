@@ -58,7 +58,7 @@ export class ChartComponent implements OnInit {
   }
 
   calculate() {
-    debugger
+    
     // this.finalResults=[];
     // console.log(this.finalResults);
     // this.getValidVotes(this.finalResults);
