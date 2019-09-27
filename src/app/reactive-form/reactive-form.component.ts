@@ -43,6 +43,7 @@ export class ReactiveComponent  {
   })
 
   addTopic(topic: HTMLInputElement){
+    debugger
     (this.form.get('topics') as FormArray).push(new FormControl(topic.value))
   }
 

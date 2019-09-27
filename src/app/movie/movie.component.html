@@ -1,7 +1,7 @@
 <button class="buttons__GET" (click)="getMovies()">Get all the movies!</button>
 <button class="buttons__GET" (click)="clean()">Clean!</button>
 <!-- <button class="buttons__GET" (click)="getMyMovies()" *ngIf='this.movies.length>0'>Get my movies</button> -->
-<select [(ngModel)]="selectedKey" (change)="changeDirective()">
+<select [(ngModel)]="selectedKey" (change)="changeDirective()" style="padding: 2px 2px 3px">
   <option  *ngFor="let key of selectValueKeys; let i=index"   > {{ key }}</option>
 </select>
 
