@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class RandomJokeComponent implements OnInit {
 
   category: string;
-  joke: object;
+  joke: any;
 
   constructor(private random: RandomJokeService, router: Router) { }
 
@@ -21,7 +21,9 @@ export class RandomJokeComponent implements OnInit {
 
   getAJoke(){
     this.random.getJoke(this.category).subscribe((data)=>{
-      console.log(data)
+      this.joke=data;
+      console.log(data);
+      console.log(this.joke)
 
     })
   }
