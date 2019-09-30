@@ -12,6 +12,7 @@ import { NasaImgComponent } from '../nasa-img/nasa-img.component';
 })
 export class LazyComponent implements OnInit {
   @Input()
+  myData: object[];
   key: string;
   route: string;
   environment: any;
@@ -31,6 +32,7 @@ export class LazyComponent implements OnInit {
   ngOnInit() {
     
     console.clear()
+    this.myData=[];
     this.showData=false;
     this.showImg=false;
     
@@ -41,10 +43,15 @@ export class LazyComponent implements OnInit {
   getAll(){
       this.nasaService.getAll().subscribe(data=>{
         
+        
+        
+        
         this.nasa=Object.values(data);
         
-        this.nasa=this.nasa[0].map((obj,pos)=>{
+        this.getData(this.nasa[0]);
 
+        this.nasa=this.nasa[0].map((obj,pos)=>{
+          
           let  answer: any ={
             number: pos+1,
           }
@@ -69,12 +76,21 @@ export class LazyComponent implements OnInit {
           return answer;
         });
 
+        
         this.getImg();
         
       })
   }
 
-
+  getData(input){
+    
+    if(this.nasa.length>0){
+      console.log(this.nasa)
+      this.myData.push(...this.nasa)
+      console.log(input)
+      console.log(this.myData)
+    }
+  }
   getImg(){
     if(this.nasa.length>0){
       this.images=this.nasa.map(object=>object['img_src']);

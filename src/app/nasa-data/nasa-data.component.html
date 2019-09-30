@@ -1,3 +1,5 @@
-<p>
-  nasa-data works!
-</p>
+<p> {{data.id | json}} {{ data.camera.name | json}} {{ data.camera.full_name }} {{data.camera.id}} </p>
+<p> {{ data.rover.name | json}} {{ data.rover.max_date | json}} </p>
+<ul *ngFor="let camera of data.rover.cameras"> 
+  <li>{{ camera.name | json}} {{ camera.full_name}} </li>
+</ul>

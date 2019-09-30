@@ -10,13 +10,13 @@ export class NasaImgComponent implements OnInit {
   image: string;
   @Input() receivedImages: string[];
   @Input() index: number;
+
   constructor() { }
 
   ngOnInit() {
-    this.index=this.index['number'];
-    this.image=this.receivedImages[this.index-1];
-    console.log(this.index)
-    console.log(this.image)
+    // debugger
+    this.index=this.index['number']-1;
+    this.image=this.receivedImages[this.index];
   }
 
 }
