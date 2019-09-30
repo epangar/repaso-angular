@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nasa-img',
@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NasaImgComponent implements OnInit {
 
+  image: string;
+  @Input() receivedImages: string[];
+  @Input() index: number;
   constructor() { }
 
   ngOnInit() {
-    
+    this.index=this.index['number'];
+    this.image=this.receivedImages[this.index-1];
+    console.log(this.index)
+    console.log(this.image)
   }
 
 }

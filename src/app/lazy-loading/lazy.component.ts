@@ -16,7 +16,7 @@ export class LazyComponent implements OnInit {
   route: string;
   environment: any;
   nasa: any;
-  images: any;
+  images: string[];
   showData: boolean;
   showImg: boolean;
   
@@ -69,9 +69,16 @@ export class LazyComponent implements OnInit {
           return answer;
         });
 
-        console.log(this.nasa) 
-         
+        this.getImg();
+        
       })
+  }
+
+
+  getImg(){
+    if(this.nasa.length>0){
+      this.images=this.nasa.map(object=>object['img_src']);
+    }
   }
 
   toggleData = () => this.showData = !this.showData;

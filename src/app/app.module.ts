@@ -13,15 +13,16 @@ import { ScreenComponent } from './screen/screen.component';
 import { MovieComponent } from './movie/movie.component';
 import { ChuckComponent } from './chuck/chuck.component';
 import { PipesComponent } from './pipes/pipes.component';
-// import { LazyComponent } from './lazy-loading/lazy.component';
 import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
 import { DataBindingChildComponent } from './communication-child/communication-child.component';
 import { UrlParamsComponent } from './url-params/url-params.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ChartComponent } from './chart/chart.component';
 import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
-
-// import { CrudComponent } from './crud/crud.component';
+//import { LazyComponent } from './lazy-loading/lazy.component';
+//import { RandomJokeComponent } from './random-joke/random-joke.component';
+//import { ReactiveComponent } from './reactive-form/reactive-form.component';
+//import { CrudComponent } from './crud/crud.component';
 
 
 
@@ -29,7 +30,7 @@ import { UrlParamsIdComponent } from './url-params-id/url-params-id.component';
 import { ListService } from '../services/list.service'; 
 import { ChuckService } from '../services/chuck.service'; 
 import { NasaService } from '../services/nasa.service'; 
-import { ParentToChildService } from "../services/parentToChild.service";
+import { RandomJokeService } from "../services/random-joke.service";
 
 //Pipes
 
@@ -37,7 +38,6 @@ import { LeetPipe } from '../app/pipes/catalogue/leet.pipe';
 import { AlternatePipe } from '../app/pipes/catalogue/alternate.pipe';
 import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
 import { LiteratePipe } from './pipes/catalogue/literate.pipe';
-//import { ReactiveComponent } from './reactive-form/reactive-form.component';
 
 
 
@@ -64,6 +64,7 @@ import { LiteratePipe } from './pipes/catalogue/literate.pipe';
     UrlParamsIdComponent,
     ClassesComponent,
     ChartComponent,
+    //RandomJokeComponent,
     //ReactiveComponent,
     // CrudComponent,
     
@@ -85,7 +86,7 @@ import { LiteratePipe } from './pipes/catalogue/literate.pipe';
     ChuckService, 
     NasaService, 
     EnvServiceProvider, 
-    ParentToChildService
+    RandomJokeService
   ],
   bootstrap: [AppComponent]
 })

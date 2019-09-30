@@ -30,6 +30,7 @@ const routes: Routes = [
   {path: "lazy", loadChildren: './lazy-loading/lazy.module#LazyLoadingModule' },
   {path: "crud", loadChildren: './crud/crud.module#CrudModule' },
   {path: "reactive-form", loadChildren: './reactive-form/reactive-form.module#ReactiveModule' },
+  {path: "random-joke", loadChildren: './random-joke/random-joke.module#RandomJokeModule' },
  
  
 ];

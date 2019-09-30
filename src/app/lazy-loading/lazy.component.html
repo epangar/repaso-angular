@@ -7,5 +7,9 @@
 <div *ngFor="let n of nasa" class="nasa__card">
   <p>{{n.number}}) {{n.name}}: {{n.full_name}}</p>
   <app-nasa-data *ngIf="this.showData===true"></app-nasa-data>
-  <app-nasa-img  *ngIf="this.showImg===true"></app-nasa-img>
+
+
+  <app-nasa-img  *ngIf="this.showImg===true"
+                [receivedImages]="images"
+                [index]="n"></app-nasa-img>
 </div>

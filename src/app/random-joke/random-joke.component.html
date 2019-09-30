@@ -1,0 +1,12 @@
+<form (ngSubmit)="getAJoke()">
+
+  <select [(ngModel)]="category" name="category" >
+    <option selected value="Any" >Miscellaneous</option>
+    <option value="Religious">Religious</option>
+    <option value="Programming">Programming</option>
+    <option value="Dark">Dark</option>
+  </select>
+  <br>
+  <br>
+  <button type="submit" > Get me a joke!</button>
+</form>
