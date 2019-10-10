@@ -18,7 +18,7 @@ export class AppComponent {
   title = 'my Angular demo';
   route: string;
   myCache: Object;
-  
+  logged: boolean;
 
   
   
@@ -36,12 +36,15 @@ export class AppComponent {
 
   ngOnInit() {
     console.clear()
-    
+    this.logged= true;
     // console.log(this)
     // console.log(this.myCache)
   }
 
-    
+  login(){
+    this.logged=!this.logged;
+    console.log(`logged = ${this.logged}`)
+  }
   
 }
   

@@ -21,4 +21,16 @@
     background-color: #FFFFFF;
     text-align: left;
     color: #000000;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: #DBDBDB;
+        color: #3887D4;
+        text-decoration: none;
+    }
+
+    &:after{
+        content: "➤";
+        float: right;
+    }
 }

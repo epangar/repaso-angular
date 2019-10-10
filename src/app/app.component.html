@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 
-<div style="text-align:center">
+<section *ngIf="logged===false">
+  <p>Please log in</p>
+  <button (click)="login()">Click</button>
+</section>
+
+<div *ngIf="logged===true" style="text-align:center">
+  
   <h1 class="app__title">
     Welcome to {{ title }}!
   </h1>
   <div class="app__block">
-    <nav class="app__nav col-md-2">
+    <nav class="app__nav col-sm-2 col-md-3">
       <a routerLink="/home" class="margin-link">Home</a>
       <a routerLink="/movies" class="margin-link">Movies</a>
       <a routerLink="/chuck" class="margin-link">Chuck</a>
