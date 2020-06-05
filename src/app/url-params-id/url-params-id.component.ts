@@ -5,7 +5,7 @@ import { PhoneBook } from '../../data/phonebook';
 @Component({
   selector: 'app-url-params-id',
   templateUrl: './url-params-id.component.html',
-  styleUrls: ['../../styles/_url-params-id.component.scss']
+  styleUrls: ['../../styles/_url-params-id.scss']
 })
 export class UrlParamsIdComponent implements OnInit {
   contact: object;

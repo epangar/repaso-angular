@@ -8,6 +8,7 @@ import { NasaImgComponent } from './nasa-img/nasa-img.component';
 import { ScreenComponent } from './screen/screen.component';
 import { ChartComponent } from './chart/chart.component';
 import { ReactiveComponent } from './reactive-form/reactive-form.component';
+import { ReactiveSiblingsComponent } from './reactive-siblings/reactive-siblings.component';
 import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { UrlParamsComponent } from './url-params/url-params.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: "lazy", loadChildren: './lazy-loading/lazy.module#LazyLoadingModule' },
   {path: "crud", loadChildren: './crud/crud.module#CrudModule' },
   {path: "reactive-form", loadChildren: './reactive-form/reactive-form.module#ReactiveModule' },
+  {path: "reactive-siblings", loadChildren: './reactive-siblings/reactive-siblings.module#ReactiveSiblingsModule' },
   {path: "random-joke", loadChildren: './random-joke/random-joke.module#RandomJokeModule' },
  
  

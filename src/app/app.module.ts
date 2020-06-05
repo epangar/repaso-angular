@@ -38,6 +38,9 @@ import { LeetPipe } from '../app/pipes/catalogue/leet.pipe';
 import { AlternatePipe } from '../app/pipes/catalogue/alternate.pipe';
 import { ReversePipe } from '../app/pipes/catalogue/reverse.pipe';
 import { LiteratePipe } from './pipes/catalogue/literate.pipe';
+import { ReactiveSiblingsComponent } from './reactive-siblings/reactive-siblings.component';
+import { FirstSiblingComponent } from './first-sibling/first-sibling.component';
+import { SecondSiblingComponent } from './second-sibling/second-sibling.component';
 
 
 
@@ -64,6 +67,9 @@ import { LiteratePipe } from './pipes/catalogue/literate.pipe';
     UrlParamsIdComponent,
     ClassesComponent,
     ChartComponent,
+    //ReactiveSiblingsComponent,
+    // FirstSiblingComponent,
+    // SecondSiblingComponent,
     //RandomJokeComponent,
     //ReactiveComponent,
     // CrudComponent,

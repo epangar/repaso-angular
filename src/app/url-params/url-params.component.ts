@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-url-params',
   templateUrl: './url-params.component.html',
-  styleUrls: ['../../styles/_url-params.component.scss']
+  styleUrls: ['../../styles/_url-params.scss']
 })
 
 
