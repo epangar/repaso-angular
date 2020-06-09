@@ -2,17 +2,17 @@
 import { NgModule } from '@angular/core';
 
 // This Module's Components
-import { PipesComponent } from './pipes.component';
+//import { PipesComponent } from './pipes.component';
 
 @NgModule({
     imports: [
 
     ],
     declarations: [
-        PipesComponent,
+        //PipesComponent,
     ],
     exports: [
-        PipesComponent,
+        //PipesComponent,
     ]
 })
 export class PipesModule {

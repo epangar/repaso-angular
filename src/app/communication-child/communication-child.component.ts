@@ -13,7 +13,7 @@ import { Person } from '../../classes/Person';
 export class DataBindingChildComponent implements OnInit{
     
     randomNumber: number;
-    _receivedPerson: Person;
+    // receivedPerson: Person;
     people: Person[] = [];
 
     constructor() {

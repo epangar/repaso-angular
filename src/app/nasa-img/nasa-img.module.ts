@@ -5,7 +5,9 @@ import { NasaImgRoutingModule } from './nasa-img-routing.module';
 import { NasaImgComponent } from './nasa-img.component';
 
 @NgModule({
-  declarations: [NasaImgComponent],
+  declarations: [
+    //NasaImgComponent
+  ],
   imports: [
     CommonModule,
     NasaImgRoutingModule

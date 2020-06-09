@@ -36,7 +36,7 @@ export class ClassesComponent implements OnInit {
 
     let eagle: Bird = new Eagle()
     let reptile: Reptile = new Reptile(true, 4, true, false, false, "Earth");
-
+    
     console.log(animal,bat, bird, croc, eagle, reptile)
   }
 }

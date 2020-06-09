@@ -1,0 +1,6 @@
+.reactive-siblings{
+    &__subcomponents{
+        display: flex;
+        flex-flow: row;
+    }
+}

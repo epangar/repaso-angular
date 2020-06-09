@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-first-sibling',
+  selector: 'first-sibling',
   templateUrl: './first-sibling.component.html',
-  styleUrls: ['./first-sibling.component.scss']
+  styleUrls: ['../../styles/_first-sibling.scss']
+  
 })
 export class FirstSiblingComponent implements OnInit {
 

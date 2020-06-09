@@ -5,7 +5,9 @@ import { NasaDataRoutingModule } from './nasa-data-routing.module';
 import { NasaDataComponent } from './nasa-data.component';
 
 @NgModule({
-  declarations: [NasaDataComponent],
+  declarations: [
+    //NasaDataComponent
+  ],
   imports: [
     CommonModule,
     NasaDataRoutingModule
