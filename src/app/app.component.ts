@@ -15,7 +15,7 @@ import { DATA } from '../classes/DATA';
 })
 
 export class AppComponent {
-  title = 'my Angular demo';
+  title = 'My Angular Demo';
   route: string;
   myCache: Object;
   logged: boolean;

@@ -10,6 +10,7 @@ selector: 'communication-child',
 templateUrl: 'communication-child.component.html',
 styleUrls: ['../../styles/_communication-child.scss']
 })
+
 export class DataBindingChildComponent implements OnInit{
 
 randomNumber: number;

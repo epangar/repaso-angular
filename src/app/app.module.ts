@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
-//import { CommunicationParentModule } from './communication-parent/communication-parent.module';
 
 
 //Components
@@ -14,8 +13,8 @@ import { ScreenComponent } from './screen/screen.component';
 import { MovieComponent } from './movie/movie.component';
 import { ChuckComponent } from './chuck/chuck.component';
 import { PipesComponent } from './pipes/pipes.component';
-import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
-import { DataBindingChildComponent } from './communication-child/communication-child.component';
+// import { CommunicationParentComponent } from './communication-parent/communication-parent.component';
+// import { DataBindingChildComponent } from './communication-child/communication-child.component';
 import { UrlParamsComponent } from './url-params/url-params.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ChartComponent } from './chart/chart.component';
@@ -57,8 +56,8 @@ import { SecondSiblingComponent } from './second-sibling/second-sibling.componen
     // LazyComponent,
     // NasaDataComponent,
     // NasaImgComponent,
-    DataBindingChildComponent,
-    CommunicationParentComponent,
+    //DataBindingChildComponent,
+    //CommunicationParentComponent,
     PipesComponent,
     LeetPipe,
     ReversePipe,
