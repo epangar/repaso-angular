@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
-import { CommunicationParentModule } from './communication-parent/communication-parent.module';
+//import { CommunicationParentModule } from './communication-parent/communication-parent.module';
 
 
 //Components
@@ -82,7 +82,7 @@ import { SecondSiblingComponent } from './second-sibling/second-sibling.componen
     AppRoutingModule,
     FormsModule,
     ChartsModule,
-    CommunicationParentModule,
+    //CommunicationParentModule,
     ReactiveFormsModule
     
   ],

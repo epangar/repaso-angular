@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: "home", component: ScreenComponent },
   {path: "movies", component: MovieComponent},
   {path: "chuck", component: ChuckComponent},
-  {path: "comunication", component: CommunicationParentComponent},
+  //{path: "comunication", component: CommunicationParentComponent},
   {path: "pipes", component: PipesComponent},
   {path: "url-param", component: UrlParamsComponent},
   {path: "url-param/contact/:id", component: UrlParamsIdComponent},
