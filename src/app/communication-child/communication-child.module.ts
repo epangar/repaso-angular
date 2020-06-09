@@ -10,16 +10,16 @@ import { DataBindingChildComponent } from './communication-child.component';
 
 @NgModule({
     imports: [
-        BrowserModule, FormsModule        
+        BrowserModule, FormsModule, DataBindingChildComponent     
     ],
     declarations: [
-        //DataBindingChildComponent
+        DataBindingChildComponent
     ],
     exports: [
         DataBindingChildComponent,
     ],
     providers: [
-        DataBindingChildComponent,
+        //DataBindingChildComponent,
     ]
 })
 export class DataBindingChildModule {

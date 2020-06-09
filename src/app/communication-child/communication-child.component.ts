@@ -1,10 +1,10 @@
 import { Component, 
         OnInit, Input, Output, 
         EventEmitter, 
-        OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
+        OnChanges, SimpleChanges, SimpleChange, NgModule } from '@angular/core';
 import { Person } from '../../classes/Person';
 
-
+@NgModule()
 @Component({
     selector: 'communication-child',
     templateUrl: 'communication-child.component.html',

@@ -10,10 +10,11 @@ import { CommunicationParentComponent } from './communication-parent.component';
 
 @NgModule({
     imports: [
-        BrowserModule, FormsModule  
+        BrowserModule, FormsModule , 
     ],
     declarations: [
-        DataBindingChildModule
+        
+        
     ],
     exports: [
         CommunicationParentComponent,
