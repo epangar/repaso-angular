@@ -27,8 +27,10 @@ export class CommunicationParentComponent {
     }
 
     submitForm(myForm: NgForm) {
+        
         console.log(myForm)
         this.sentPerson = myForm.value;
+        
         myForm.resetForm()
         
     }
